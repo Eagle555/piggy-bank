@@ -33,7 +33,7 @@ class PiggyBank
   end
     
   def add
-    puts "how much coins would you add"
+    puts "how many pounds would you like to add"
     coins = gets.chomp.to_i
     @bank += coins
     puts "Your account is now #{@bank}"
@@ -41,19 +41,19 @@ class PiggyBank
   
   def shake
     if @bank > 0
-      puts "Cling"
+      puts "Clink"
     else 
       puts "Empty"
     end
   end
   
   def show
-    puts "You have #{@bank} on you account"
+    puts "You have #{@bank} pounds in your account"
   end
   
   def smash
     if @bank > 0
-      puts "Piggy bank smashed and #{@bank} land on the floor"
+      puts "Piggy bank smashed and #{@bank} pounds land on the floor"
       @bank = 0
     else
       puts "Empty"
@@ -61,13 +61,13 @@ class PiggyBank
   end
   
   def withdraw
-    puts "How much coins would you like to withdraw?"
+    puts "How many coins would you like to withdraw?"
     coins = gets.chomp.to_i
     if coins > @bank
-      puts "No enough coins. You have only #{@bank}"
+      puts "No enough pounds. You have only #{@bank}"
     else
       @bank -= coins
-      puts "You have now #{@bank} coins"
+      puts "You have now #{@bank} pounds"
     end
   end
   
